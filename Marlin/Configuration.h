@@ -21,131 +21,6 @@
  */
 #pragma once
 
-//JUST uncomment the option for your machine
-//#define V6_330_TITAN_TMC 1
-//#define V6_330_TITAN_NO_TMC 1
-//  #define V6_330_NO_TITAN_TMC 1
-//#define V6_330_NO_TITAN_NO_TMC 1
-// #define V6_400_TITAN_TMC 1
-// #define V6_400_NO_TITAN_TMC 1
-//#define V6_500_TITAN_TMC 1
-
-// #define V5_330_TITAN_TMC 1
-// #define V5_330_TITAN_NO_TMC 1
-// #define V5_330_NO_TITAN_TMC 1
-// #define V5_330_NO_TITAN_NO_TMC 1
-// #define XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL 1
-
-#if V6_330_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  #define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 Titan TMC"
-
-#elif V6_330_TITAN_NO_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  //#define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 Titan"
-
-#elif V6_330_NO_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  #define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 330 TMC"
-
-#elif V6_330_NO_TITAN_NO_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  //#define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6"
-  
-#elif V6_400_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  #define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 400
-  #define Y_BED_SIZE 400
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 Titan TMC"
-
-#elif V6_400_NO_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  #define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 400
-  #define Y_BED_SIZE 400
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 400 TMC"
-
-#elif V6_500_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V6
-  #define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 500
-  #define Y_BED_SIZE 500
-  #define Z_MAX_POS 500
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V6 500 Titan TMC"
-
-#elif V5_330_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V5
-  #define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 Titan TMC"
-
-#elif V5_330_TITAN_NO_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V5
-  //#define WITH_TMC 1
-  #define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 Titan"
-
-#elif V5_330_NO_TITAN_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V5
-  #define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330 TMC"
-
-#elif V5_330_NO_TITAN_NO_TMC
-  #define MOTHERBOARD BOARD_CHITU3D_V5
-  //#define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 330
-  #define Y_BED_SIZE 330
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy X5SA V5 330"
-
-#elif XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
-  #define MOTHERBOARD BOARD_CHITU3D_V5
-  //#define WITH_TMC 1
-  //#define WITH_TITAN 1
-  #define X_BED_SIZE 310
-  #define Y_BED_SIZE 310
-  #define Z_MAX_POS 400
-  #define CUSTOM_MACHINE_NAME "Tronxy XY3 310"
-
-#endif
-
 /**
  * Configuration.h
  *
@@ -253,11 +128,11 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_CHITU3D_V6
+  #define MOTHERBOARD BOARD_CHITU3D_V5
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-
+#define CUSTOM_MACHINE_NAME "Tronxy XY-2 Pro"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like http://www.uuidgenerator.net/version4
@@ -735,9 +610,6 @@
 
 // Uncomment one of these options to enable CoreXY, CoreXZ, or CoreYZ kinematics
 // either in the usual order or reversed
-#ifndef XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
-#define COREXY
-#endif
 //#define COREXZ
 //#define COREYZ
 //#define COREYX
@@ -811,41 +683,23 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-#ifdef WITH_TMC
-  #define X_DRIVER_TYPE TMC2208_STANDALONE
-  #define Y_DRIVER_TYPE TMC2208_STANDALONE
-  #define Z_DRIVER_TYPE TMC2208_STANDALONE
-  //#define X2_DRIVER_TYPE A4988
-  //#define Y2_DRIVER_TYPE A4988
-  //#define Z2_DRIVER_TYPE A4988
-  //#define Z3_DRIVER_TYPE A4988
-  //#define Z4_DRIVER_TYPE A4988
-  #define E0_DRIVER_TYPE TMC2208_STANDALONE
-  //#define E1_DRIVER_TYPE A4988
-  //#define E2_DRIVER_TYPE A4988
-  //#define E3_DRIVER_TYPE A4988
-  //#define E4_DRIVER_TYPE A4988
-  //#define E5_DRIVER_TYPE A4988
-  //#define E6_DRIVER_TYPE A4988
-  //#define E7_DRIVER_TYPE A4988
-#else
-  #define X_DRIVER_TYPE  A4988
-  #define Y_DRIVER_TYPE  A4988
-  #define Z_DRIVER_TYPE  A4988
-  //#define X2_DRIVER_TYPE A4988
-  //#define Y2_DRIVER_TYPE A4988
-  //#define Z2_DRIVER_TYPE A4988
-  //#define Z3_DRIVER_TYPE A4988
-  //#define Z4_DRIVER_TYPE A4988
-  #define E0_DRIVER_TYPE A4988
-  //#define E1_DRIVER_TYPE A4988
-  //#define E2_DRIVER_TYPE A4988
-  //#define E3_DRIVER_TYPE A4988
-  //#define E4_DRIVER_TYPE A4988
-  //#define E5_DRIVER_TYPE A4988
-  //#define E6_DRIVER_TYPE A4988
-  //#define E7_DRIVER_TYPE A4988
-#endif
+
+#define X_DRIVER_TYPE  A4988
+#define Y_DRIVER_TYPE  A4988
+#define Z_DRIVER_TYPE  A4988
+//#define X2_DRIVER_TYPE A4988
+//#define Y2_DRIVER_TYPE A4988
+//#define Z2_DRIVER_TYPE A4988
+//#define Z3_DRIVER_TYPE A4988
+//#define Z4_DRIVER_TYPE A4988
+#define E0_DRIVER_TYPE A4988
+//#define E1_DRIVER_TYPE A4988
+//#define E2_DRIVER_TYPE A4988
+//#define E3_DRIVER_TYPE A4988
+//#define E4_DRIVER_TYPE A4988
+//#define E5_DRIVER_TYPE A4988
+//#define E6_DRIVER_TYPE A4988
+//#define E7_DRIVER_TYPE A4988
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -890,19 +744,8 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#if WITH_TMC && WITH_TITAN
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 764 }
-#elif WITH_TMC && !WITH_TITAN
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 186 }
-#elif WITH_TITAN && !WITH_TMC
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 420 }
-#else
-  #define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
-#endif
 
-// #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 420 }
-//TITAN EXTRUDER:
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 92.6 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 1600, 92.6 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1244,28 +1087,15 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#ifdef XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
-  #define INVERT_X_DIR false
-#else
-  #define INVERT_X_DIR true
-#endif
-
-#define INVERT_Y_DIR true
-
-#ifdef XY3_V5_310_NO_TITAN_NO_TMC_NO_ABL
-  #define INVERT_Z_DIR true
-#else
-  #define INVERT_Z_DIR false
-#endif
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR true
 
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#if WITH_TITAN
-  #define INVERT_E0_DIR true
-#else
-  #define INVERT_E0_DIR false
-#endif
+
+#define INVERT_E0_DIR false
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1294,8 +1124,8 @@
 // @section machine
 
 // The size of the print bed
-// #define X_BED_SIZE 330
-// #define Y_BED_SIZE 330
+#define X_BED_SIZE 255
+#define Y_BED_SIZE 255
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1303,6 +1133,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
+#define Z_MAX_POS 260
 
 /**
  * Software Endstops
